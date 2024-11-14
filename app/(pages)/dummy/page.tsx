@@ -10,10 +10,13 @@ const Page = () => {
     offset: ['start start', 'end end'],
   });
   return (
-    <main className="relative h-[200vh]">
-      <Section1 scrollYProgress={scrollYProgress} />
-      <Section2 scrollYProgress={scrollYProgress} />
-    </main>
+    <>
+      <main className="relative h-[400vh] overflow-hidden">
+        <Section1 scrollYProgress={scrollYProgress} />
+        <Section2 scrollYProgress={scrollYProgress} />
+        <Section3 scrollYProgress={scrollYProgress} />
+      </main>
+    </>
   );
 };
 
@@ -57,19 +60,45 @@ const Section2 = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [-10, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.8, 1, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.3, 1], [-10, 0, 0]);
   const blur = useTransform(
     scrollYProgress,
-    [0, 1],
-    ['blur(3px)', 'blur(0px)']
+    [0, 0.3, 0.8, 1],
+    ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(3px)'] // blurr
   );
   return (
     <motion.div
       style={{ scale, rotate, filter: blur }}
-      className="relative h-screen bg-indigo-600"
+      className="relative h-[200vh] bg-indigo-600 pt-[10vh] flex flex-col items-center justify-between text-white "
     >
-      <div className="size-52 bg-gray-500"></div>
+      <p>Section 2</p>
+      <p>Section 2</p>
+      <p>Section 2</p>
+      <p>Section 2</p>
+    </motion.div>
+  );
+};
+
+const Section3 = ({
+  scrollYProgress,
+}: {
+  scrollYProgress: MotionValue<number>;
+}) => {
+  // const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  // const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const positionY = useTransform(scrollYProgress, [0, 1], ['30%', '0%']);
+
+  return (
+    <motion.div
+      style={{
+        // scale,
+        // rotate,
+        transform: `translateY(${positionY})`,
+      }}
+      className="relative h-[100vh] py-[10vh] bg-transparent text-[3.5vw] flex flex-col items-center justify-center text-white "
+    >
+      TESStt
     </motion.div>
   );
 };

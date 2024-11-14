@@ -13,7 +13,7 @@ const HeroContent = () => {
         duration: 0.8,
         ease: 'easeInOut',
       }}
-      className="relative flex flex-col gap-3 items-center justify-center px-4 dark:text-white font-poppins text-center"
+      className="relative flex flex-col gap-3 items-center justify-center px-4 dark:text-white font-poppins text-center h-full py-[10vh]"
     >
       <div className="text-3xl md:text-7xl font-bold font-poppins pl-3 bg-clip-text text-transparent">
         <FlipWords words={words} duration={1000} />
