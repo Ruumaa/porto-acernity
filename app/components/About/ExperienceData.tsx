@@ -2,7 +2,7 @@ import { btpnTech, coreTech, hashTech } from './Techstack';
 
 export const experiencesContent = [
   {
-    title: 'Software Engineer Intern ',
+    title: 'Software Engineer Intern',
     description: (
       <>
         <p>

@@ -24,6 +24,11 @@ export const hashTech = [
     name: 'Material-UI',
     image: '/mui.svg',
   },
+  {
+    id: 6,
+    name: 'Typescript',
+    image: '/ts.svg',
+  },
 ];
 
 export const coreTech = [

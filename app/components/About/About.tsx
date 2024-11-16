@@ -11,11 +11,15 @@ const About = ({
   const blur = useTransform(
     scrollYProgress,
     [0, 0.3, 0.8, 1],
-    ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(3px)']
+    ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(0px)']
   );
   return (
     <motion.div
-      style={{ scale, rotate, filter: blur }}
+      style={{
+        scale,
+        rotate,
+        filter: blur,
+      }}
       className="relative h-[200vh]"
     >
       <div className="h-full w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
