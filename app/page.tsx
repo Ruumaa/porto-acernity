@@ -13,7 +13,7 @@ export default function Home() {
     offset: ['start start', 'end end'],
   });
   return (
-    <div className="relative h-[400vh]">
+    <div className="relative h-[500vh]">
       <Hero scrollYProgress={scrollYProgress} />
       <About scrollYProgress={scrollYProgress} />
       <Projects scrollYProgress={scrollYProgress} />
