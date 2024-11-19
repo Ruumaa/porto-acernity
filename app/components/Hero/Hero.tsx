@@ -11,7 +11,7 @@ const Hero = ({
   return (
     <>
       <HeroBg scrollYProgress={scrollYProgress}>
-        <ResponsiveLayout>
+        <ResponsiveLayout overflow>
           <HeroContent />
         </ResponsiveLayout>
       </HeroBg>

@@ -3,13 +3,14 @@ import { LinkPreview } from '@/components/ui/link-preview';
 import Image from 'next/image';
 import React from 'react';
 import { ProjectData } from './ProjectData';
+import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
 
 const ProjectCard = () => {
   return (
-    <div>
+    <div className="w-full grid grid-cols-2 gap-y-20 mt-20">
       {ProjectData.map((data, i) => (
-        <CardContainer className="inter-var " key={i}>
-          <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+        <CardContainer className="inter-var" key={i}>
+          <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-sky-500/[0.2] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
             <CardItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -26,19 +27,18 @@ const ProjectCard = () => {
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
                 src={data.imgUrl}
-                height="1000"
-                width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                height="500"
+                width="500"
+                className="h-52 w-full object-cover object-top rounded-xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-4 relative">
+            <div className="flex items-center justify-between mt-4 relative ">
               <CardItem
                 translateZ={100}
-                as="button"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                className="flex flex-row justify-start bg-gray-50 dark:bg-black/80 w-fit px-4 py-2 rounded-xl"
               >
-                Animated tooltip
+                <AnimatedTooltip items={data.techstack} />
               </CardItem>
               <CardItem
                 translateZ={100}

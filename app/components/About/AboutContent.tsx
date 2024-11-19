@@ -10,7 +10,7 @@ const AboutContent = () => {
   const paragraphs =
     'As a current computer science student, I am focused on advancing my skills to become an advanced web developer. I am passionate about continually seeking opportunities to learn and grow in the field. I am open to gaining practical experience through internships or full-time positions that will allow me to apply my knowledge and contribute to innovative projects.';
   return (
-    <ResponsiveLayout>
+    <ResponsiveLayout overflow>
       <div className="relative z-20 w-full h-full py-[20vh] text-start font-poppins">
         <WordsAnimation
           value={title}

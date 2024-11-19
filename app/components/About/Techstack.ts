@@ -77,3 +77,73 @@ export const btpnTech = [
     image: '/jwt.svg',
   },
 ];
+
+export const ruumapediaTech = [
+  {
+    id: 1,
+    name: 'NextJS',
+    image: '/nextjs.svg',
+  },
+  { id: 2, name: 'Tailwind', image: '/tailwind.svg' },
+  { id: 3, name: 'Typescript', image: '/ts.svg' },
+  { id: 4, name: 'ShadcnUI', image: '/shadcn.png' },
+  { id: 5, name: 'Stripe', image: '/stripe.png' },
+  { id: 6, name: 'Sanity', image: '/sanity.svg' },
+];
+export const galleryAppTech = [
+  {
+    id: 1,
+    name: 'NextJS',
+    image: '/nextjs.svg',
+  },
+  { id: 2, name: 'Tailwind', image: '/tailwind.svg' },
+  { id: 3, name: 'Typescript', image: '/ts.svg' },
+  { id: 4, name: 'DaisyuUI', image: '/daisyui.svg' },
+  { id: 5, name: 'Prisma', image: '/prisma.svg' },
+  { id: 6, name: 'NextAuth', image: '/nextAuth.svg' },
+  { id: 7, name: 'Supabase', image: '/supabase.svg' },
+  { id: 8, name: 'PostgresSQL', image: '/postgres.svg' },
+  { id: 9, name: 'React-Toastify', image: '/react-toastify.svg' },
+  { id: 10, name: 'SWR', image: '/swr.svg' },
+  { id: 11, name: 'Axios', image: '/axios.svg' },
+];
+export const growhthTech = [
+  {
+    id: 1,
+    name: 'NextJS',
+    image: '/nextjs.svg',
+  },
+  { id: 2, name: 'Tailwind', image: '/tailwind.svg' },
+  { id: 3, name: 'Typescript', image: '/ts.svg' },
+  { id: 4, name: 'DaisyuUI', image: '/daisyui.svg' },
+  { id: 5, name: 'Midtrans', image: '/midtrans.svg' },
+  { id: 6, name: 'Nodemailer', image: '/nodemailer.png' },
+];
+
+export const spaceXTech = [
+  {
+    id: 1,
+    name: 'Graphql',
+    image: '/graphql.svg',
+  },
+  {
+    id: 2,
+    name: 'NextJs',
+    image: '/nextjs.svg',
+  },
+  {
+    id: 3,
+    name: 'Tailwind',
+    image: '/tailwind.svg',
+  },
+  {
+    id: 4,
+    name: 'ShadcnUI',
+    image: '/shadcn.png',
+  },
+  {
+    id: 5,
+    name: 'Typescript',
+    image: '/ts.svg',
+  },
+];

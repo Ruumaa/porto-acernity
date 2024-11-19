@@ -1,8 +1,18 @@
 import { ReactNode } from 'react';
 
-const ResponsiveLayout = ({ children }: { children: ReactNode }) => {
+const ResponsiveLayout = ({
+  children,
+  overflow,
+}: {
+  children: ReactNode;
+  overflow?: boolean;
+}) => {
   return (
-    <div className="w-full max-w-sm mx-auto md:max-w-2xl xl:max-w-6xl overflow-hidden h-full">
+    <div
+      className={`w-full max-w-sm mx-auto md:max-w-2xl xl:max-w-6xl ${
+        overflow ? 'overflow-hidden' : ''
+      } h-full`}
+    >
       {children}
     </div>
   );
