@@ -1,72 +1,57 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { LinkPreview } from '@/components/ui/link-preview';
-// import { LinkPreview } from '@/components/ui/link-preview';
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
+import { ProjectData } from './ProjectData';
 
 const ProjectCard = () => {
   return (
     <div>
-      {/* <LinkPreview
-        width={300}
-        height={200}
-        url="https://ruumapedia.vercel.app/"
-      >
-        Ruumapedia
-      </LinkPreview>
-      <LinkPreview url="https://www.growth-learning.com/">Growth</LinkPreview>
-      <LinkPreview url="https://gallery-app-v2.vercel.app/">
-        Gallery App
-      </LinkPreview> */}
-      <CardContainer className="inter-var ">
-        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-          <CardItem
-            translateZ="50"
-            className="text-xl font-bold text-neutral-600 dark:text-white"
-          >
-            Ruumapedia
-          </CardItem>
-          <CardItem
-            as="p"
-            translateZ="60"
-            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-          >
-            A responsive ecommerce site with Stripe integration for seamless
-            checkouts, powered by Sanity for efficient product data management.
-          </CardItem>
-          <CardItem translateZ="100" className="w-full mt-4">
-            <Image
-              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              height="1000"
-              width="1000"
-              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt="thumbnail"
-            />
-          </CardItem>
-          <div className="flex justify-between items-center mt-4 relative">
+      {ProjectData.map((data, i) => (
+        <CardContainer className="inter-var " key={i}>
+          <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
             <CardItem
-              translateZ={100}
-              as="button"
-              className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              translateZ="50"
+              className="text-xl font-bold text-neutral-600 dark:text-white"
             >
-              Animated tooltip
+              {data.title}
             </CardItem>
             <CardItem
-              translateZ={100}
-              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+              as="p"
+              translateZ="60"
+              className="text-neutral-500 text-xs max-w-sm mt-2 dark:text-neutral-300"
             >
-              <LinkPreview
-                width={300}
-                height={200}
-                url="https://ruumapedia.vercel.app/"
+              {data.desc}
+            </CardItem>
+            <CardItem translateZ="100" className="w-full mt-4">
+              <Image
+                src={data.imgUrl}
+                height="1000"
+                width="1000"
+                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                alt="thumbnail"
+              />
+            </CardItem>
+            <div className="flex justify-between items-center mt-4 relative">
+              <CardItem
+                translateZ={100}
+                as="button"
+                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
-                Ruumapedia
-              </LinkPreview>
-            </CardItem>
-          </div>
-        </CardBody>
-      </CardContainer>
+                Animated tooltip
+              </CardItem>
+              <CardItem
+                translateZ={100}
+                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+              >
+                <LinkPreview width={300} height={200} url={data.url}>
+                  Visit
+                </LinkPreview>
+              </CardItem>
+            </div>
+          </CardBody>
+        </CardContainer>
+      ))}
     </div>
   );
 };
