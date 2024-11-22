@@ -34,12 +34,14 @@ const ProjectCard = () => {
               />
             </CardItem>
             <div className="flex items-center justify-between mt-4 relative ">
+              {/* <div className="bg-gray-50 dark:bg-gray-500 w-auto pr-6 pl-1 rounded-xl"> */}
               <CardItem
                 translateZ={100}
-                className="flex flex-row justify-start bg-gray-50 dark:bg-black/80 w-fit px-4 py-2 rounded-xl"
+                className="flex flex-row justify-start  w-auto pr-6 pl-2 py-1 bg-background/70 rounded-lg border border-black/20 dark:border-white/20"
               >
                 <AnimatedTooltip items={data.techstack} />
               </CardItem>
+              {/* </div> */}
               <CardItem
                 translateZ={100}
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"

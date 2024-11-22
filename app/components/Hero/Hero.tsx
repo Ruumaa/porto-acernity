@@ -9,13 +9,13 @@ const Hero = ({
   scrollYProgress: MotionValue<number>;
 }) => {
   return (
-    <>
+    <div id="hero">
       <HeroBg scrollYProgress={scrollYProgress}>
         <ResponsiveLayout overflow>
           <HeroContent />
         </ResponsiveLayout>
       </HeroBg>
-    </>
+    </div>
   );
 };
 

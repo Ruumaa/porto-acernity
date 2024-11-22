@@ -16,7 +16,7 @@ export function ModeToggle() {
     <Button
       onClick={handleClick}
       variant={'ghost'}
-      className="bg-inherit hover:bg-inherit hover:border dark:hover:border-white/[0.2] hover:border-[#D7D8D9] "
+      className="bg-inherit hover:bg-inherit  hover:text-black/[0.4] dark:hover:text-[#D7D8D9] "
     >
       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />

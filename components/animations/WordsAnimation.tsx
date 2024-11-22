@@ -19,7 +19,7 @@ const WordsAnimation = ({
   const words = value.split(' ');
 
   return (
-    <p className={className} ref={container}>
+    <p className={className} ref={container} id="about">
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;

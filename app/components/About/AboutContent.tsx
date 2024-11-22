@@ -20,6 +20,7 @@ const AboutContent = () => {
           value={paragraphs}
           className="text-2xl max-w-full flex flex-wrap mt-10"
         />
+
         {/* Experience */}
         <div className="mt-20">
           <h1 className="text-6xl font-bold font-merrieweather mb-10">
