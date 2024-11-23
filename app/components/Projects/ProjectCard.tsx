@@ -1,7 +1,6 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { LinkPreview } from '@/components/ui/link-preview';
 import Image from 'next/image';
-import React from 'react';
 import { ProjectData } from './ProjectData';
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
 
@@ -34,14 +33,12 @@ const ProjectCard = () => {
               />
             </CardItem>
             <div className="flex items-center justify-between mt-4 relative ">
-              {/* <div className="bg-gray-50 dark:bg-gray-500 w-auto pr-6 pl-1 rounded-xl"> */}
               <CardItem
                 translateZ={100}
                 className="flex flex-row justify-start  w-auto pr-6 pl-2 py-1 bg-background/70 rounded-lg border border-black/20 dark:border-white/20"
               >
                 <AnimatedTooltip items={data.techstack} />
               </CardItem>
-              {/* </div> */}
               <CardItem
                 translateZ={100}
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
