@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects';
 import CTA from './components/CTA/CTA';
+import Footer from './components/Footer/Footer';
 
 export default function Home() {
   const container = useRef(null);
@@ -19,6 +20,7 @@ export default function Home() {
       <About scrollYProgress={scrollYProgress} />
       <Projects scrollYProgress={scrollYProgress} />
       <CTA scrollYProgress={scrollYProgress} />
+      <Footer />
       {/* footer */}
     </div>
   );

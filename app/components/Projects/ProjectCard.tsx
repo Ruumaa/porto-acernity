@@ -1,7 +1,7 @@
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 import { LinkPreview } from '@/components/ui/link-preview';
 import Image from 'next/image';
-import { ProjectData } from './ProjectData';
+import { ProjectData } from '../../../lib/ProjectData';
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
 
 const ProjectCard = () => {

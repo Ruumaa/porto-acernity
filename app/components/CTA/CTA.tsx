@@ -4,7 +4,7 @@ import CTAContent from './CTAContent';
 
 const CTA = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   return (
-    <div className="h-[100vh]">
+    <div className="max-h-[100vh] py-[20vh]">
       <CTAContent />
     </div>
   );

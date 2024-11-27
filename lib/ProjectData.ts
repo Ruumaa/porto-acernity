@@ -3,7 +3,7 @@ import {
   growhthTech,
   ruumapediaTech,
   spaceXTech,
-} from '../About/Techstack';
+} from './Techstack';
 
 export const ProjectData = [
   {

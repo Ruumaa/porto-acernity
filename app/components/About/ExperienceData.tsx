@@ -1,4 +1,4 @@
-import { btpnTech, coreTech, hashTech } from './Techstack';
+import { btpnTech, coreTech, hashTech } from '../../../lib/Techstack';
 
 export const experiencesContent = [
   {
