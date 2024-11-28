@@ -6,12 +6,12 @@ const About = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.8, 1, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 0.3, 1], [-10, 0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.5], [5, 0]);
   const blur = useTransform(
     scrollYProgress,
-    [0, 0.3, 0.8, 1],
-    ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(0px)']
+    [0, 0.5],
+    ['blur(3px)', 'blur(0px)']
   );
   return (
     <div>
@@ -23,7 +23,7 @@ const About = ({
         }}
         className="relative h-[200vh]"
       >
-        <div className="h-full w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
+        <div className="h-full w-full dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
           {/* Radial gradient for the container to give a faded look */}
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
           <AboutContent />

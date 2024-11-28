@@ -1,11 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { MotionValue } from 'framer-motion';
 import CTAContent from './CTAContent';
+import { Vortex } from '@/components/ui/vortex';
 
-const CTA = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
+const CTA = () => {
   return (
-    <div className="max-h-[100vh] py-[20vh]">
+    <div className="h-screen  flex items-center justify-center relative pt-20">
+      {/* <Vortex className="flex items-center flex-col justify-center  py-4 w-full"> */}
       <CTAContent />
+      {/* </Vortex> */}
     </div>
   );
 };

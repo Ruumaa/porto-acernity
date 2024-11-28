@@ -1,7 +1,8 @@
 'use client';
 
 import { MotionValue, useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import Lenis from 'lenis';
 
 const Page = () => {
   const container = useRef(null);
@@ -9,13 +10,25 @@ const Page = () => {
     target: container,
     offset: ['start start', 'end end'],
   });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
-      <main className="relative h-[400vh] overflow-hidden">
+      <main className="relative h-[200vh] overflow-hidden" ref={container}>
         <Section1 scrollYProgress={scrollYProgress} />
         <Section2 scrollYProgress={scrollYProgress} />
-        <Section3 scrollYProgress={scrollYProgress} />
+        {/* <Section3 scrollYProgress={scrollYProgress} /> */}
       </main>
+      <Section3 />
     </>
   );
 };
@@ -28,7 +41,7 @@ const Section1 = ({
   scrollYProgress: MotionValue<number>;
 }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   const blur = useTransform(
     scrollYProgress,
     [0, 1],
@@ -60,17 +73,23 @@ const Section2 = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.8, 1, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 0.3, 1], [-10, 0, 0]);
-  const blur = useTransform(
-    scrollYProgress,
-    [0, 0.3, 0.8, 1],
-    ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(3px)'] // blurr
-  );
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+  // const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.8, 1, 1]);
+  // const rotate = useTransform(scrollYProgress, [0, 0.3, 1], [-10, 0, 0]);
+  // const blur = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.3, 0.8, 1],
+  //   ['blur(3px)', 'blur(0px)', 'blur(0px)', 'blur(3px)'] // blurr
+  // );
   return (
     <motion.div
-      style={{ scale, rotate, filter: blur }}
-      className="relative h-[200vh] bg-indigo-600 pt-[10vh] flex flex-col items-center justify-between text-white "
+      style={{
+        scale,
+        rotate,
+        // filter: blur
+      }}
+      className="relative h-screen bg-indigo-300 pt-[10vh] flex flex-col items-center justify-between text-white "
     >
       <p>Section 2</p>
       <p>Section 2</p>
@@ -83,19 +102,21 @@ const Section2 = ({
 const Section3 = ({
   scrollYProgress,
 }: {
-  scrollYProgress: MotionValue<number>;
+  scrollYProgress?: MotionValue<number>;
 }) => {
   // const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   // const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
-  const positionY = useTransform(scrollYProgress, [0, 1], ['30%', '0%']);
+  // const positionY = useTransform(scrollYProgress, [0, 1], ['30%', '0%']);
 
   return (
     <motion.div
-      style={{
-        // scale,
-        // rotate,
-        transform: `translateY(${positionY})`,
-      }}
+      style={
+        {
+          // scale,
+          // rotate,
+          // transform: `translateY(${positionY})`,
+        }
+      }
       className="relative h-[100vh] py-[10vh] bg-transparent text-[3.5vw] flex flex-col items-center justify-center text-white "
     >
       TESStt

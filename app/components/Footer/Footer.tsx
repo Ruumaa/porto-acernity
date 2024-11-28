@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className="w-full h-80 dark:border-white/[0.2] border-black/[0.1] border border-t py-10 ">
+    <div className="w-full dark:border-white/[0.2] border-black/[0.1] border border-t py-10 ">
       <ResponsiveLayout>
         <div className="w-full flex justify-between">
           <div className="w-1/2 h-full flex flex-col justify-between">

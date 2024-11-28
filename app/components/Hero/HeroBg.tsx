@@ -10,8 +10,8 @@ const HeroBg = ({
   scrollYProgress: MotionValue<number>;
 }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
-  // const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const blur = useTransform(
     scrollYProgress,
     [0, 1],
@@ -22,12 +22,14 @@ const HeroBg = ({
       style={{
         scale,
         rotate,
-        // opacity,
+        opacity,
         filter: blur,
       }}
-      className="sticky top-0 h-[100vh] "
+      id="hero"
+      className="sticky top-0 h-screen pb-[10vh]"
     >
       <AuroraBackground>{children}</AuroraBackground>
+      {children}
     </motion.div>
   );
 };

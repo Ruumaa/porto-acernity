@@ -15,13 +15,17 @@ export default function Home() {
     offset: ['start start', 'end end'],
   });
   return (
-    <div className="relative h-[600vh]">
-      <Hero scrollYProgress={scrollYProgress} />
-      <About scrollYProgress={scrollYProgress} />
-      <Projects scrollYProgress={scrollYProgress} />
-      <CTA scrollYProgress={scrollYProgress} />
+    <>
+      <main
+        ref={container}
+        className="relative h-[300vh] bg-gradient-to-tr from-white via-indigo-100 to-blue-200 dark:bg-gradient-to-l dark:from-zinc-900 dark:via-sky-100 dark:to-zinc-700"
+      >
+        <Hero scrollYProgress={scrollYProgress} />
+        <About scrollYProgress={scrollYProgress} />
+      </main>
+      <Projects />
+      <CTA />
       <Footer />
-      {/* footer */}
-    </div>
+    </>
   );
 }

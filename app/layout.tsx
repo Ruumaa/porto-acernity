@@ -49,7 +49,7 @@ export default function RootLayout({
       className={`${inter.variable} ${roboto.variable} ${poppins.variable} ${merrieweather.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <body className="overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
