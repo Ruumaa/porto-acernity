@@ -11,7 +11,6 @@ const HeroBg = ({
 }) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
   const blur = useTransform(
     scrollYProgress,
     [0, 1],
@@ -22,7 +21,6 @@ const HeroBg = ({
       style={{
         scale,
         rotate,
-        opacity,
         filter: blur,
       }}
       id="hero"

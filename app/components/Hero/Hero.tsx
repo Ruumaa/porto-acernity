@@ -9,9 +9,9 @@ const Hero = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    console.log('Page scroll: ', latest);
-  });
+  // useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+  //   console.log('Page scroll: ', latest);
+  // });
   return (
     // <div id="hero">
     <>

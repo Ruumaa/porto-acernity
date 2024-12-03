@@ -9,7 +9,7 @@ const Projects = () => {
 
   const spotlightColor = theme === 'dark' ? 'white' : 'black';
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   return (
     <div className="h-[160vh]  relative" id="projects">

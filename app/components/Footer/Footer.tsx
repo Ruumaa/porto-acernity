@@ -1,50 +1,47 @@
-import ResponsiveLayout from '@/components/layouts/ResponsiveLayout';
-import Link from 'next/link';
+import FlipLink from './FlipLink';
+import StickyWrapper from './StickyWrapper';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <div className="w-full dark:border-white/[0.2] border-black/[0.1] border border-t py-10 ">
-      <ResponsiveLayout>
-        <div className="w-full flex justify-between">
-          <div className="w-1/2 h-full flex flex-col justify-between">
-            <h1 className="text-4xl font-merrieweather font-bold mt-auto">
-              ©2024 Ruumaa, All rights reserved.
-            </h1>
-          </div>
+    <StickyWrapper>
+      <div className="w-full h-full flex justify-between py-10 ">
+        <div className="w-1/2 h-full flex flex-col ">
+          <h1 className="text-4xl font-merrieweather font-bold">
+            ©2024 Ruumaa, All rights reserved.
+          </h1>
+        </div>
 
-          <div className="w-1/2 grid grid-cols-2">
-            <div className="w-56">
-              {/* Label */}
-              <h1 className="font-merrieweather font-medium text-xl ">
-                Navigation
-              </h1>
-              <span className=" my-4 block w-full h-[1px] bg-black/[0.1] dark:bg-white/[0.3]"></span>
-              {/* Content */}
-              <div className="flex flex-col gap-4  text-neutral-500 dark:text-neutral-300 font-light">
-                <Link href={'/#hero'}>Hero</Link>
-                <Link href={'/#about'}>About</Link>
-                <Link href={'/#projects'}>Projects</Link>
-              </div>
+        <div className="w-1/2 grid grid-cols-2">
+          <div className="w-56">
+            <motion.h1 className="font-merrieweather font-bold text-xl uppercase ">
+              Navigation
+            </motion.h1>
+            <motion.span className="my-2 block w-full h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
+            <div className="flex flex-col gap-4 mt-4  dark:text-neutral-500 text-neutral-300">
+              <FlipLink href={'#hero'}>Hero</FlipLink>
+              <FlipLink href={'#about'}>About</FlipLink>
+              <FlipLink href={'#projects'}>Projects</FlipLink>
             </div>
-            <div className="w-56">
-              <h1 className="font-merrieweather font-medium text-xl ">
-                Socials
-              </h1>
-              <span className=" my-4 block w-full h-[1px] bg-black/[0.1] dark:bg-white/[0.3]"></span>
-              <div className="flex flex-col gap-4 mt-4 text-sm text-neutral-500 dark:text-neutral-300">
-                <Link href="www.linkedin.com/in/titan-ramadhan">Linkedin</Link>
-                <Link href="https://www.hackerrank.com/profile/titankalbuesa01">
-                  HackerRank
-                </Link>
-                <Link href="https://github.com/Ruumaa" passHref>
-                  Github
-                </Link>
-              </div>
+          </div>
+          <div className="w-56">
+            <h1 className="font-merrieweather font-bold  text-xl uppercase ">
+              Socials
+            </h1>
+            <span className=" my-2 block w-full h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
+            <div className="flex flex-col gap-4 mt-4  dark:text-neutral-500 text-neutral-300">
+              <FlipLink href="https://github.com/Ruumaa">Github</FlipLink>
+              <FlipLink href="www.linkedin.com/in/titan-ramadhan">
+                Linkedin
+              </FlipLink>
+              <FlipLink href="https://www.hackerrank.com/profile/titankalbuesa01">
+                HackerRank
+              </FlipLink>
             </div>
           </div>
         </div>
-      </ResponsiveLayout>
-    </div>
+      </div>
+    </StickyWrapper>
   );
 };
 

@@ -1,12 +1,12 @@
 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useScroll } from 'framer-motion';
 import About from './components/About/About';
 import Hero from './components/Hero/Hero';
 import Projects from './components/Projects/Projects';
-import CTA from './components/CTA/CTA';
-import Footer from './components/Footer/Footer';
+import Lenis from 'lenis';
+import CTAandFooter from './components/CTA/CTAandFooter';
 
 export default function Home() {
   const container = useRef(null);
@@ -14,6 +14,19 @@ export default function Home() {
     target: container,
     offset: ['start start', 'end end'],
   });
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       <main
@@ -24,8 +37,9 @@ export default function Home() {
         <About scrollYProgress={scrollYProgress} />
       </main>
       <Projects />
-      <CTA />
-      <Footer />
+      <main>
+        <CTAandFooter />
+      </main>
     </>
   );
 }

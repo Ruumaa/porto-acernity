@@ -3,14 +3,16 @@ import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import MovingText from './MovingText';
+import { MotionValue } from 'framer-motion';
 
-const CTAContent = () => {
+const CTAContent = ({
+  scrollYProgress,
+}: {
+  scrollYProgress: MotionValue<number>;
+}) => {
   const { theme } = useTheme();
   const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
 
   const bgColor = hydrated
     ? theme === 'dark'
@@ -18,12 +20,18 @@ const CTAContent = () => {
       : 'rgb(209 213 219)'
     : 'rgb(209 213 219)';
 
+  const color = hydrated ? (theme === 'dark' ? 'white' : 'black') : 'black';
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
   return (
-    <>
+    <div className="relative h-screen">
       <ResponsiveLayout>
-        <div className="w-full h-full relative z-10 font-poppins">
+        <div className="w-full max-w-sm mx-auto md:max-w-2xl xl:max-w-6xl h-full absolute inset-0 z-20 font-poppins flex items-center justify-center">
           <CardSpotlight
-            className="w-full min-h-80 flex items-center justify-around"
+            className="w-full py-16 flex items-center justify-around"
             color={bgColor}
           >
             <div className="relative z-20 w-2/4">
@@ -33,10 +41,10 @@ const CTAContent = () => {
               <p className="text-neutral-500 dark:text-neutral-300 text-sm">
                 Bringing your creative ideas to life with interactive web
                 applications that engage and inspire. Whether it&apos;s a
-                portfolio or a full product, your vision becomes reality.{' '}
+                portfolio or a full product, your vision becomes reality.
               </p>
             </div>
-            <div className="relative z-20">
+            <div className="relative z-30">
               <HoverBorderGradient className="dark:bg-black bg-white hover:bg-gradient-to-br text-black dark:text-white px-5 py-3">
                 Let&apos;s Collaborate
               </HoverBorderGradient>
@@ -44,7 +52,8 @@ const CTAContent = () => {
           </CardSpotlight>
         </div>
       </ResponsiveLayout>
-    </>
+      <MovingText scrollYProgress={scrollYProgress} color={color} />
+    </div>
   );
 };
 
