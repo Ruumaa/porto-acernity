@@ -3,6 +3,7 @@ import { LinkPreview } from '@/components/ui/link-preview';
 import Image from 'next/image';
 import { ProjectData } from '../../../lib/ProjectData';
 import { AnimatedTooltip } from '@/components/ui/animated-tooltip';
+import VisitButton from './visit-button';
 
 const ProjectCard = () => {
   return (
@@ -44,7 +45,7 @@ const ProjectCard = () => {
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
                 <LinkPreview width={300} height={200} url={data.url}>
-                  Visit
+                  <VisitButton />
                 </LinkPreview>
               </CardItem>
             </div>

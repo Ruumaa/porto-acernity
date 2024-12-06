@@ -52,9 +52,9 @@ export default function RootLayout({
       <body className="overflow-x-hidden">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="dark"
+          // enableSystem
+          // disableTransitionOnChange
         >
           <Navbar />
           <main> {children}</main>

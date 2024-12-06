@@ -1,5 +1,6 @@
 'use client';
 
+import VisitButton from '@/app/components/Projects/visit-button';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
@@ -41,6 +42,7 @@ const Section1 = ({
         </div>
         <p>Transition</p>
       </div>
+      <VisitButton />
     </motion.div>
   );
 };
