@@ -1,6 +1,7 @@
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import React, { ReactNode } from 'react';
 import { motion, MotionValue, useTransform } from 'framer-motion';
+import ScrollMore from './ScrollMore';
 
 const HeroBg = ({
   children,
@@ -26,8 +27,13 @@ const HeroBg = ({
       id="hero"
       className="sticky top-0 h-screen pb-[10vh]"
     >
-      <AuroraBackground>{children}</AuroraBackground>
-      {children}
+      <div className="h-screen relative bg-yellow-200">
+        <AuroraBackground>{children}</AuroraBackground>
+        {/* keep scrolling */}
+        <div className="absolute bottom-5 right-20">
+          <ScrollMore />
+        </div>
+      </div>
     </motion.div>
   );
 };

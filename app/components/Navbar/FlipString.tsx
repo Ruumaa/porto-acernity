@@ -1,16 +1,15 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const FlipLink = ({ children, href }: { children: string; href?: string }) => {
+const FlipString = ({ children }: { children: string }) => {
   const duration = 0.15;
   const stagger = 0.015;
 
   return (
-    <motion.a
+    <motion.span
       initial="initial"
       whileHover="hovered"
-      href={href}
-      className="relative block overflow-hidden whitespace-nowrap font-black font-merrieweather uppercase text-xs"
+      className="relative block overflow-hidden whitespace-nowrap font-black uppercase font-merrieweather text-xs"
       style={{ lineHeight: 1 }}
     >
       <div>
@@ -55,8 +54,8 @@ const FlipLink = ({ children, href }: { children: string; href?: string }) => {
           </motion.span>
         ))}
       </div>
-    </motion.a>
+    </motion.span>
   );
 };
 
-export default FlipLink;
+export default FlipString;

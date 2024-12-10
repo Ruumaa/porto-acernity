@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import { HoverBorderGradient } from './hover-border-gradient';
 import { ModeToggle } from '@/app/components/Navbar/ModeToggle';
+import FlipString from '@/app/components/Navbar/FlipString';
+import HoverUp from '@/app/components/Navbar/HoverUp';
 
 export const FloatingNav = ({
   navItems,
@@ -25,6 +27,7 @@ export const FloatingNav = ({
 }) => {
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Scroll Direction Tracking
   useMotionValueEvent(scrollYProgress, 'change', (current) => {
@@ -95,16 +98,23 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <div className="hidden sm:block text-sm">
+              <FlipString>{navItem.name}</FlipString>
+            </div>
           </Link>
         ))}
         <ModeToggle />
-        <HoverBorderGradient className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
-          <span className="hidden sm:block">
-            <Mail className="size-4" />
-          </span>
-          <span>Contact</span>
-        </HoverBorderGradient>
+        <div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <HoverBorderGradient className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
+            <span className="hidden sm:block">
+              <Mail className="size-4 stroke-[2.5px]" />
+            </span>
+            <HoverUp label={'Contact'} isHovered={isHovered}></HoverUp>
+          </HoverBorderGradient>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

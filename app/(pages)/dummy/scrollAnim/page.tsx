@@ -3,6 +3,9 @@
 import VisitButton from '@/app/components/Projects/visit-button';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import ArrowDown from '@/public/arrow-down.svg';
+import Image from 'next/image';
+import WordsAnimation from '@/components/animations/WordsAnimation';
 
 export default function Home() {
   const container = useRef(null);
@@ -42,6 +45,7 @@ const Section1 = ({
         </div>
         <p>Transition</p>
       </div>
+      <div className="size-52 bg-gray-500 flex items-center justify-around"></div>
       <VisitButton />
     </motion.div>
   );
@@ -54,12 +58,21 @@ const Section2 = ({
 }) => {
   const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
   const rotate = useTransform(scrollYProgress, [0, 0.5], [5, 0]);
+
+  const title =
+    'As a current computer science student, I am focused on advancing my skills to become an advanced web developer. I am passionate about continually seeking opportunities to learn and grow in the field. I am open to gaining practical experience through internships or full-time positions that will allow me to apply my knowledge and contribute to innovative projects.';
+
+  const para =
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cum ab maxime sunt at autem veritatis atque corporis temporibus soluta?';
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="relative h-[200vh] w-full bg-blue-500"
+      className="relative h-[200vh] w-full bg-blue-500 flex items-center justify-center"
     >
-      <div className="bg-red-200 size-80"></div>
+      <div className="h-full w-full max-w-2xl bg-red-200 overflow-hidden ">
+        <WordsAnimation value={title} className="text-2xl font-bold" />
+        <WordsAnimation value={title} className="text-2xl font-bold" />
+      </div>
     </motion.div>
   );
 };
@@ -136,5 +149,45 @@ const Footer = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const SpiralArrow = () => {
+  return (
+    <motion.svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      className="w-24 h-24"
+      initial={{ rotate: 0 }}
+      animate={{
+        rotate: 360,
+        translateX: [0, 10, 20, 30, 40], // Gerakan spiral
+        translateY: [0, 10, 20, 30, 40],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: 'linear',
+      }}
+    >
+      <circle
+        cx="50"
+        cy="50"
+        r="45"
+        stroke="#000"
+        strokeWidth="3"
+        fill="none"
+      />
+      <motion.polyline
+        points="50,5 50,15 70,15" // Panah yang bergerak di sekitar spiral
+        stroke="#000"
+        strokeWidth="3"
+        fill="none"
+        transform="rotate(0 50 50)"
+      />
+    </motion.svg>
   );
 };
