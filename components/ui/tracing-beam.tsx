@@ -6,6 +6,7 @@ import {
   useScroll,
   useVelocity,
   useSpring,
+  easeInOut,
 } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -50,6 +51,10 @@ export const TracingBeam = ({
     <motion.div
       ref={ref}
       className={cn('relative w-full max-w-4xl mx-auto h-full', className)}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: easeInOut }}
+      viewport={{ once: true }}
     >
       <div className="absolute -left-4 md:-left-20 top-3">
         <motion.div
@@ -72,9 +77,9 @@ export const TracingBeam = ({
             }}
             animate={{
               backgroundColor:
-                scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-500)',
+                scrollYProgress.get() > 0 ? 'white' : 'var(--sky-500)',
               borderColor:
-                scrollYProgress.get() > 0 ? 'white' : 'var(--emerald-600)',
+                scrollYProgress.get() > 0 ? 'white' : 'var(--sky-600)',
             }}
             className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
           />

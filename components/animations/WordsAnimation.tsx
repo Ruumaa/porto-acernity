@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 
 import { MotionValue, useScroll, useTransform, motion } from 'framer-motion';
@@ -6,9 +7,11 @@ import { useRef } from 'react';
 const WordsAnimation = ({
   value,
   className,
+  dependencyScroll = false,
 }: {
   value: string;
   className: string;
+  dependencyScroll?: boolean;
 }) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -18,13 +21,17 @@ const WordsAnimation = ({
 
   const words = value.split(' ');
 
+  const adjustedScrollProgress = dependencyScroll
+    ? useTransform(scrollYProgress, [0.9, 1], [0, 1])
+    : scrollYProgress;
+
   return (
     <p className={className} ref={container} id="about">
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;
         return (
-          <Word key={i} range={[start, end]} proggress={scrollYProgress}>
+          <Word key={i} range={[start, end]} proggress={adjustedScrollProgress}>
             {word}
           </Word>
         );

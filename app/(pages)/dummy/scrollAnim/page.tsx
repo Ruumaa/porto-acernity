@@ -3,8 +3,6 @@
 import VisitButton from '@/app/components/Projects/visit-button';
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import ArrowDown from '@/public/arrow-down.svg';
-import Image from 'next/image';
 import WordsAnimation from '@/components/animations/WordsAnimation';
 
 export default function Home() {

@@ -1,12 +1,11 @@
-import { easeInOut, motion } from 'framer-motion';
+import FadeContainer from '@/components/animations/FadeContainer';
+import { motion } from 'framer-motion';
 import { CornerRightDown } from 'lucide-react';
 
 const ScrollMore = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: easeInOut }}
+    <FadeContainer
+      initialY={50}
       className="flex items-center justify-between font-poppins font-extralight"
     >
       <h5 className="font-extralight dark:text-white text-sm">
@@ -25,7 +24,7 @@ const ScrollMore = () => {
       >
         <CornerRightDown size={15} className="dark:text-white" />
       </motion.div>
-    </motion.div>
+    </FadeContainer>
   );
 };
 
