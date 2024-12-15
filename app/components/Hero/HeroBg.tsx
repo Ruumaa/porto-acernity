@@ -30,7 +30,7 @@ const HeroBg = ({
       <div className="h-screen relative bg-yellow-200">
         <AuroraBackground>{children}</AuroraBackground>
         {/* keep scrolling */}
-        <div className="absolute bottom-5 right-20">
+        <div className="absolute bottom-2 md:bottom-5 right-5 md:right-20">
           <ScrollMore />
         </div>
       </div>

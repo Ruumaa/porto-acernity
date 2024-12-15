@@ -11,7 +11,9 @@ const Navbar = () => {
 
   return (
     <>
-      <FloatingNav navItems={navItems} />
+      <div className="hidden md:block">
+        <FloatingNav navItems={navItems} />
+      </div>
     </>
   );
 };

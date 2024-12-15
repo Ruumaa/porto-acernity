@@ -8,7 +8,7 @@ const ScrollMore = () => {
       initialY={50}
       className="flex items-center justify-between font-poppins font-extralight"
     >
-      <h5 className="font-extralight dark:text-white text-sm">
+      <h5 className="font-extralight dark:text-white text-xs md:text-sm">
         Keep Scrolling
       </h5>
       <motion.div
