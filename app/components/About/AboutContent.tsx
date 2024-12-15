@@ -13,50 +13,49 @@ const AboutContent = () => {
 
   return (
     <ResponsiveLayout overflow>
-      <div className="relative z-20 w-full h-full py-[20vh] text-start font-poppins">
-        <div>
-          <FadeContainer initialX={30}>
-            <h1 className="text-6xl font-bold font-merrieweather text-transparent bg-clip-text bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
-              About Me
-            </h1>
-          </FadeContainer>
-          <WordsAnimation
-            value={content}
-            className="text-2xl max-w-full flex flex-wrap mt-10 dark:text-neutral-300 text-neutral-800"
-          />
-        </div>
+      <div className="relative z-20 w-full h-full py-[10vh]  md:py-[20vh] text-start font-poppins">
+        <FadeContainer initialX={30}>
+          <h1 className="text-4xl md:text-6xl font-bold font-merrieweather text-transparent bg-clip-text bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
+            About Me
+          </h1>
+        </FadeContainer>
+        <WordsAnimation
+          value={content}
+          className="text-xs md:text-2xl max-w-full flex flex-wrap mt-5 md:mt-10 dark:text-neutral-300 text-neutral-800"
+        />
 
         {/* Experience */}
-        <div className="mt-20">
+        <div className="mt-10 md:mt-20">
           <FadeContainer initialY={100}>
-            <h1 className="text-6xl font-black font-merrieweather mb-10 bg-clip-text text-transparent bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
+            <h1 className="text-4xl md:text-6xl font-black font-merrieweather mb-5  md:mb-10 bg-clip-text text-transparent bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
               Experiences
             </h1>
           </FadeContainer>
 
           <TracingBeam>
-            <div>
-              {experiencesContent.map((item, index) => (
-                <React.Fragment key={index}>
-                  <FadeContainer initialY={100}>
-                    <div className="my-10">
-                      <h3 className="text-2xl font-roboto font-bold ">
-                        {item.title}
-                      </h3>
+            {experiencesContent.map((item, index) => (
+              <React.Fragment key={index}>
+                <FadeContainer initialY={100} className="ml-9 md:ml-0">
+                  <div className="my-5 md:my-10">
+                    <h3 className="text-sm md:text-2xl font-roboto font-bold pt-2">
+                      {item.title}
+                    </h3>
 
-                      <ShimmerButton label={item.badge} />
+                    <ShimmerButton
+                      label={item.badge}
+                      className="text-[0.6rem] md:text-sm px-2 py-0.5 mt-2 md:mt-3 md:py-2 md:my-4 md:px-4 "
+                    />
 
-                      <div className="prose prose-sm dark:prose-invert text-neutral-800 dark:text-neutral-300 ">
-                        {item.description}
-                      </div>
-                      <div className="flex flex-row justify-start mt-5 mb-10">
-                        <AnimatedTooltip items={item.techstack} />
-                      </div>
+                    <div className="text-xs md:text-base text-justify md:text-left prose prose-sm dark:prose-invert text-neutral-800 dark:text-neutral-300 ">
+                      {item.description}
                     </div>
-                  </FadeContainer>
-                </React.Fragment>
-              ))}
-            </div>
+                    <div className="flex flex-row justify-start mt-2 md:mt-5 md:mb-10">
+                      <AnimatedTooltip items={item.techstack} />
+                    </div>
+                  </div>
+                </FadeContainer>
+              </React.Fragment>
+            ))}
           </TracingBeam>
         </div>
       </div>
