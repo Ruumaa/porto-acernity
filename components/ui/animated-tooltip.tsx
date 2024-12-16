@@ -66,7 +66,7 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: 'nowrap',
                 }}
-                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-white  dark:bg-black  z-50 shadow-xl px-4 py-2"
+                className="absolute -top-11 md:-top-16 -left-1/2 translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-white  dark:bg-black  z-50 shadow-xl px-4 py-2"
               >
                 <div className="absolute inset-x-5 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-5 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
@@ -83,7 +83,7 @@ export const AnimatedTooltip = ({
             width={100}
             src={item.image}
             alt={item.name}
-            className="object-cover !m-0 !p-1 object-center rounded-full size-10 border-2 group-hover:scale-105 border-black/30  dark:border-white backdrop-filter backdrop-blur-sm bg-opacity-30 bg-transparent relative transition duration-500 hover:z-30"
+            className="object-cover !m-0 !p-1 object-center rounded-full size-8 md:size-12 xl:size-10 border-2 group-hover:scale-105 border-black/30  dark:border-white backdrop-filter backdrop-blur-sm bg-opacity-30 bg-transparent relative transition duration-500 hover:z-30"
           />
         </div>
       ))}

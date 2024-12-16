@@ -56,7 +56,7 @@ export const TracingBeam = ({
       transition={{ duration: 1, ease: easeInOut }}
       viewport={{ once: true }}
     >
-      <div className="absolute -left-4 md:-left-20 top-3">
+      <div className="absolute -left-4 xl:-left-20  top-3">
         <motion.div
           transition={{
             duration: 0.2,

@@ -20,7 +20,7 @@ const About = ({
         rotate,
         filter: blur,
       }}
-      className="relative h-[200vh]"
+      className="relative h-[200vh] md:h-fit xl:h-[200vh]"
     >
       <div className="h-full w-full dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
         {/* Radial gradient for the container to give a faded look */}
