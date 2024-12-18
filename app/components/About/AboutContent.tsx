@@ -43,7 +43,7 @@ const AboutContent = () => {
 
                     <ShimmerButton
                       label={item.badge}
-                      className="text-[0.56rem] px-2 !py-0.5 md:text-sm mt-2 md:mt-3 md:!py-2 md:my-4 md:px-4 "
+                      className="text-[0.5rem] px-2 !py-0.5 md:text-sm mt-2 md:mt-3 md:!py-2 md:my-4 md:px-4 "
                     />
 
                     <div className="text-xs md:text-base text-justify md:text-left prose prose-sm dark:prose-invert text-neutral-800 dark:text-neutral-300 ">
