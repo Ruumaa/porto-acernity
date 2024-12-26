@@ -42,7 +42,7 @@ const CTAContent = ({
             <HoverBorderGradient
               onClick={handleMailTo}
               className="dark:bg-black bg-white text-black dark:text-white"
-              containerClassName="w-full md:w-auto text-xs md:text-base hover:bg-gradient-to-br py-1 md:px-5 md:py-1"
+              containerClassName="w-full md:w-auto text-xs md:text-base hover:bg-gradient-to-br py-1 md:px-5 md:py-1 bg-inherit"
             >
               Let&apos;s Collaborate
             </HoverBorderGradient>
