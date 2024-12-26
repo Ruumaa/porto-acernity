@@ -98,11 +98,11 @@ const config = {
         },
         spotlight: {
           from: {
-            opacity: 0,
+            opacity: '0',
             transform: 'translate(-72%, -62%) scale(0.5)',
           },
           to: {
-            opacity: 1,
+            opacity: '1',
             transform: 'translate(-50%,-40%) scale(1)',
           },
         },
