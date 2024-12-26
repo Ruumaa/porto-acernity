@@ -9,7 +9,7 @@ import React from 'react';
 
 const ProjectCard = () => {
   return (
-    <div className="w-full grid grid-cols-2 gap-y-20 mt-20">
+    <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-y-10 md:gap-y-20 mt-10 md:mt-20">
       {ProjectData.map((data, i) => (
         <React.Fragment key={i}>
           <FadeContainer initialX={i % 2 === 0 ? -100 : 100}>

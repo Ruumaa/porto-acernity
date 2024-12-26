@@ -1,7 +1,15 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const FlipLink = ({ children, href }: { children: string; href?: string }) => {
+const FlipLink = ({
+  children,
+  href,
+  onClick,
+}: {
+  children: string;
+  href?: string;
+  onClick?: (e: any) => void;
+}) => {
   const duration = 0.15;
   const stagger = 0.015;
 
@@ -10,8 +18,9 @@ const FlipLink = ({ children, href }: { children: string; href?: string }) => {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap font-black font-merrieweather uppercase text-xs"
+      className="relative block overflow-hidden whitespace-nowrap font-black font-merrieweather uppercase text-xs cursor-pointer"
       style={{ lineHeight: 1 }}
+      onClick={onClick}
     >
       <div>
         {children.split('').map((l, i) => (

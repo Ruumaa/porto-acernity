@@ -22,16 +22,13 @@ const HeroContent = () => {
       <div className="text-2xl md:text-4xl font-light -mt-2">
         I&apos;m Titan Ramadhan
       </div>
-      {/* Title */}
-      <div className="text-[1.75rem] leading-[2rem] max-w-2xl md:text-[3.5rem] md:leading-[4rem] py-5 md:py-4 font-merrieweather font-bold bg-clip-text text-transparent bg-gradient-to-bl from-indigo-100 via-indigo-400 to-sky-200 dark:from-indigo-50 dark:via-indigo-400 dark:to-sky-200">
+      <div className="text-[1.75rem] leading-[2rem] max-w-2xl md:text-[3.5rem] md:leading-[4rem] py-5 md:py-4 font-merrieweather font-bold bg-clip-text text-transparent bg-gradient-to-bl from-indigo-100 via-indigo-400 to-sky-200 dark:from-indigo-50 dark:via-indigo-300 dark:to-sky-200">
         On a Journey to Master Web Development
       </div>
-      {/* Sub title */}
       <div className="text-xs md:text-base max-w-[18rem] md:max-w-lg text-neutral-400 dar:text-neutral-300 -mt-3 md:mb-4">
         Currently Focused on Frontend Development, Committed to Expanding My
         Skills and Making an Innovative Projects
       </div>
-      {/* Button View CV */}
       <CVButton />
     </motion.div>
   );

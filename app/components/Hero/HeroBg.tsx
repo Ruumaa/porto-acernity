@@ -24,7 +24,6 @@ const HeroBg = ({
         rotate,
         filter: blur,
       }}
-      id="hero"
       className="sticky top-0 h-screen pb-[10vh]"
     >
       <div className="h-screen relative bg-yellow-200">

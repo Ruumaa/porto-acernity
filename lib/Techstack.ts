@@ -98,12 +98,10 @@ export const galleryAppTech = [
   },
   { id: 2, name: 'Tailwind', image: '/tailwind.svg' },
   { id: 3, name: 'Typescript', image: '/ts.svg' },
-  { id: 4, name: 'DaisyuUI', image: '/daisyui.svg' },
   { id: 5, name: 'Prisma', image: '/prisma.svg' },
   { id: 6, name: 'NextAuth', image: '/nextAuth.svg' },
   { id: 7, name: 'Supabase', image: '/supabase.svg' },
   { id: 8, name: 'PostgresSQL', image: '/postgres.svg' },
-  { id: 9, name: 'React-Toastify', image: '/react-toastify.svg' },
   { id: 10, name: 'SWR', image: '/swr.svg' },
   { id: 11, name: 'Axios', image: '/axios.svg' },
 ];

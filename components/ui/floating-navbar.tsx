@@ -1,11 +1,6 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { Mail } from 'lucide-react';
@@ -13,6 +8,7 @@ import { HoverBorderGradient } from './hover-border-gradient';
 import { ModeToggle } from '@/app/components/Navbar/ModeToggle';
 import FlipString from '@/app/components/Navbar/FlipString';
 import HoverUp from '@/app/components/Navbar/HoverUp';
+import { useScrollHook } from '@/app/hooks/ScrollHooks';
 
 export const FloatingNav = ({
   navItems,
@@ -25,49 +21,8 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollYProgress } = useScroll();
-  const [visible, setVisible] = useState(false);
+  const { visible, scrollToSection } = useScrollHook();
   const [isHovered, setIsHovered] = useState(false);
-
-  // Scroll Direction Tracking
-  useMotionValueEvent(scrollYProgress, 'change', (current) => {
-    if (typeof current === 'number') {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
-      if (current <= 0.05) {
-        setVisible(true);
-      } else {
-        setVisible(direction < 0);
-      }
-    }
-  });
-
-  useEffect(() => {
-    setVisible(true);
-  }, []);
-
-  // Refs untuk setiap section
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    target: string
-  ) => {
-    e.preventDefault();
-
-    // Aktifkan scroll-behavior smooth sementara
-    const html = document.documentElement;
-    html.style.scrollBehavior = 'smooth';
-
-    // Seleksi elemen dengan ID yang sesuai
-    const section = document.querySelector(target);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // Nonaktifkan scroll-behavior setelah beberapa waktu
-    setTimeout(() => {
-      html.style.scrollBehavior = '';
-    }, 500);
-  };
 
   return (
     <AnimatePresence mode="wait">

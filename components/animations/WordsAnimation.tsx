@@ -26,7 +26,7 @@ const WordsAnimation = ({
     : scrollYProgress;
 
   return (
-    <p className={className} ref={container} id="about">
+    <p className={className} ref={container}>
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + 1 / words.length;

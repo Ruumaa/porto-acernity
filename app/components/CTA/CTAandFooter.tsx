@@ -12,7 +12,7 @@ const CTAandFooter = () => {
   });
 
   return (
-    <div ref={container} className="">
+    <div ref={container}>
       <CTAContent scrollYProgress={scrollYProgress} />
       <Footer />
     </div>

@@ -1,5 +1,6 @@
 import { MotionValue, useTransform, motion } from 'framer-motion';
 import AboutContent from './AboutContent';
+import RadialGradient from '@/components/layouts/RadialGradient';
 
 const About = ({
   scrollYProgress,
@@ -20,11 +21,10 @@ const About = ({
         rotate,
         filter: blur,
       }}
-      className="relative h-[200vh] md:h-fit xl:h-[200vh]"
+      className="relative h-fit max-h-[200vh] md:h-fit xl:h-[200vh]"
     >
       <div className="h-full w-full dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
-        {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+        <RadialGradient />
         <AboutContent />
       </div>
     </motion.div>
