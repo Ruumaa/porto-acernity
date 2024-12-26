@@ -18,19 +18,19 @@ const AboutContent = () => {
         id="about"
       >
         <FadeContainer initialX={30}>
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold font-merrieweather text-transparent bg-clip-text bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
+          <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-bold font-merrieweather text-transparent bg-clip-text bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
             About Me
           </h1>
         </FadeContainer>
         <WordsAnimation
           value={content}
-          className="text-xs md:text-xl xl:text-2xl max-w-full flex flex-wrap mt-5 lg:mt-10 dark:text-neutral-300 text-neutral-800"
+          className="text-xs md:text-xl 2xl:text-2xl max-w-full flex flex-wrap mt-5 lg:mt-10 dark:text-neutral-300 text-neutral-800"
         />
 
         {/* Experience */}
         <div className="mt-10 lg:mt-20">
           <FadeContainer initialY={100}>
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-black font-merrieweather mb-5  md:mb-10 bg-clip-text text-transparent bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
+            <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-black font-merrieweather mb-5  md:mb-10 bg-clip-text text-transparent bg-gradient-to-bl dark:from-white dark:to-neutral-300  from-neutral-300 to-black">
               Experiences
             </h1>
           </FadeContainer>
@@ -49,7 +49,7 @@ const AboutContent = () => {
                       className="!text-[0.56rem] px-2 !py-0.5 md:!text-sm mt-2 md:mt-3 md:!py-2 md:my-4 md:px-4 "
                     />
 
-                    <div className="text-xs md:text-base text-justify md:text-left prose prose-sm dark:prose-invert text-neutral-800 dark:text-neutral-300 ">
+                    <div className="text-xs md:text-sm xl:text-base text-justify md:text-left prose prose-sm dark:prose-invert text-neutral-800 dark:text-neutral-300 ">
                       {item.description}
                     </div>
                     <div className="flex flex-row justify-start mt-2 md:mt-5 md:mb-10">
