@@ -40,7 +40,7 @@ const Footer = () => {
             <span className="my-2 block  w-36 h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
             <div className="flex flex-col gap-4 mt-4  dark:text-neutral-500 text-neutral-300">
               <FlipLink href="https://github.com/Ruumaa">Github</FlipLink>
-              <FlipLink href="www.linkedin.com/in/titan-ramadhan">
+              <FlipLink href="https://www.linkedin.com/in/titan-ramadhan">
                 Linkedin
               </FlipLink>
               <FlipLink href="https://www.hackerrank.com/profile/titankalbuesa01">
