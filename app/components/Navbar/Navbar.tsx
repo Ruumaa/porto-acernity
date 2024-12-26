@@ -1,7 +1,7 @@
 'use client';
 
 import { FloatingNav } from '@/components/ui/floating-navbar';
-import { navItems } from './NavItems';
+import { navItems } from '../../../lib/NavItems';
 
 const Navbar = () => {
   return (

@@ -5,26 +5,18 @@ import { useEffect, useState } from 'react';
 import MovingText from './MovingText';
 import { MotionValue } from 'framer-motion';
 import FadeContainer from '@/components/animations/FadeContainer';
+import { useBgColor } from '@/app/hooks/BgColorHooks';
 
 const CTAContent = ({
   scrollYProgress,
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
-  const { theme } = useTheme();
-  const [hydrated, setHydrated] = useState(false);
+  const { color, bgColor } = useBgColor();
 
-  const bgColor = hydrated
-    ? theme === 'dark'
-      ? '#262626'
-      : 'rgb(209 213 219)'
-    : 'rgb(209 213 219)';
-
-  const color = hydrated ? (theme === 'dark' ? 'white' : 'black') : 'black';
-
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
+  const handleMailTo = () => {
+    window.location.href = 'mailto:titankalbuesa01@gmail.com';
+  };
 
   return (
     <div className="relative h-screen">
@@ -48,6 +40,7 @@ const CTAContent = ({
           </div>
           <div className="relative z-30 w-full md:w-auto mt-7">
             <HoverBorderGradient
+              onClick={handleMailTo}
               className="dark:bg-black bg-white text-black dark:text-white"
               containerClassName="w-full md:w-auto text-xs md:text-base hover:bg-gradient-to-br py-1 md:px-5 md:py-1"
             >

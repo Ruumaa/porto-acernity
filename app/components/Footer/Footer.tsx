@@ -2,7 +2,7 @@ import { useScrollHook } from '@/app/hooks/ScrollHooks';
 import FlipLink from './FlipLink';
 import StickyWrapper from './StickyWrapper';
 import { motion } from 'framer-motion';
-import { navItems } from '../Navbar/NavItems';
+import { navItems } from '../../../lib/NavItems';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -20,7 +20,7 @@ const Footer = () => {
             <motion.h1 className="font-merrieweather font-bold text-base md:text-xl uppercase ">
               Navigation
             </motion.h1>
-            <motion.span className="my-2 block w-36 h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
+            <motion.span className="my-2 block w-36 xl:w-full h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
             <div className="flex flex-col gap-4 mt-4  dark:text-neutral-500 text-neutral-300">
               {navItems.map((item) => (
                 <FlipLink
@@ -37,7 +37,7 @@ const Footer = () => {
             <h1 className="font-merrieweather font-bold  text-base md:text-xl uppercase ">
               Socials
             </h1>
-            <span className="my-2 block  w-36 h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
+            <span className="my-2 block  w-36 xl:w-full h-[1px] dark:bg-black/[0.5] bg-white/[0.5]" />
             <div className="flex flex-col gap-4 mt-4  dark:text-neutral-500 text-neutral-300">
               <FlipLink href="https://github.com/Ruumaa">Github</FlipLink>
               <FlipLink href="https://www.linkedin.com/in/titan-ramadhan">

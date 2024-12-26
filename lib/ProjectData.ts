@@ -30,7 +30,7 @@ export const ProjectData = [
   {
     title: 'Space-X Schedule',
     desc: 'Simple website displaying SpaceX rocket launch schedules using the SpaceX API for real-time updates. Users can add and edit personal notes, with data stored locally via localStorage for persistence.',
-    imgUrl: '/project-card/spaceX.png',
+    imgUrl: '/project-card/spacex.png',
     techstack: spaceXTech,
     url: 'https://spacex-schedule.vercel.app/',
   },

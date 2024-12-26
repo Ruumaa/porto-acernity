@@ -23,6 +23,9 @@ export const FloatingNav = ({
 }) => {
   const { visible, scrollToSection } = useScrollHook();
   const [isHovered, setIsHovered] = useState(false);
+  const handleMailTo = () => {
+    window.location.href = 'mailto:titankalbuesa01@gmail.com';
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -63,7 +66,10 @@ export const FloatingNav = ({
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <HoverBorderGradient className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
+          <HoverBorderGradient
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            onClick={handleMailTo}
+          >
             <span className="hidden sm:block">
               <Mail className="size-4 stroke-[2.5px]" />
             </span>
