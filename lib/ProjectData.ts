@@ -1,11 +1,18 @@
 import {
   galleryAppTech,
   growhthTech,
+  portofolioTech,
   ruumapediaTech,
-  spaceXTech,
 } from './Techstack';
 
 export const ProjectData = [
+  {
+    title: 'Portofolio By Ruumaa',
+    desc: 'A dynamic and interactive portfolio web application designed to showcase creativity and technical expertise. It features smooth animations, seamless scrolling, and a responsive design.',
+    imgUrl: '/project-card/portofolio.png',
+    techstack: portofolioTech,
+    url: 'https://portfolio-by-ruumaa.vercel.app/',
+  },
   {
     title: 'Ruumapedia',
     desc: 'A responsive ecommerce site with Stripe integration for seamless checkouts, powered by Sanity for efficient product data management.',
@@ -26,12 +33,5 @@ export const ProjectData = [
     imgUrl: '/project-card/growth.png',
     techstack: growhthTech,
     url: 'https://www.growth-learning.com/',
-  },
-  {
-    title: 'Space-X Schedule',
-    desc: 'Simple website displaying SpaceX rocket launch schedules using the SpaceX API for real-time updates. Users can add and edit personal notes, with data stored locally via localStorage for persistence.',
-    imgUrl: '/project-card/spacex.png',
-    techstack: spaceXTech,
-    url: 'https://spacex-schedule.vercel.app/',
   },
 ];

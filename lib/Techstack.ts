@@ -118,16 +118,16 @@ export const growhthTech = [
   { id: 6, name: 'Nodemailer', image: '/nodemailer.png' },
 ];
 
-export const spaceXTech = [
+export const portofolioTech = [
   {
     id: 1,
-    name: 'Graphql',
-    image: '/graphql.svg',
+    name: 'NextJs',
+    image: '/nextjs.svg',
   },
   {
     id: 2,
-    name: 'NextJs',
-    image: '/nextjs.svg',
+    name: 'Typescript',
+    image: '/ts.svg',
   },
   {
     id: 3,
@@ -139,9 +139,15 @@ export const spaceXTech = [
     name: 'ShadcnUI',
     image: '/shadcn.png',
   },
+
   {
-    id: 5,
-    name: 'Typescript',
-    image: '/ts.svg',
+    id: 6,
+    name: 'AcernityUI',
+    image: '/acernity.svg',
+  },
+  {
+    id: 7,
+    name: 'Framer Motion',
+    image: '/framer-motion.svg',
   },
 ];
