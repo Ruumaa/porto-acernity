@@ -3,7 +3,7 @@ import React from 'react';
 
 const StickyWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative border-white/[0.2]  dark:border-black/[0.1] border border-t bg-black dark:bg-[#F0f0f0] text-[#F0f0f0] dark:text-black overflow-x-hidden ">
+    <div className="relative border-white/[0.2]  dark:border-black/[0.1] border border-t bg-black dark:bg-[#F0f0f0] text-[#F0f0f0] dark:text-black">
       <ResponsiveLayout>
         <div
           className="relative h-[254px]  md:h-56"

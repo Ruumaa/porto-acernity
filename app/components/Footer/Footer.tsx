@@ -25,7 +25,6 @@ const Footer = () => {
               {navItems.map((item) => (
                 <FlipLink
                   key={item.name}
-                  // href={item.link}
                   onClick={(e) => scrollToSection(e, item.link)}
                 >
                   {item.name}
