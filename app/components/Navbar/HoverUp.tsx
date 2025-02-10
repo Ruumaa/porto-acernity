@@ -1,18 +1,24 @@
+import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
 const HoverUp = ({
   label,
   isHovered,
+  className,
 }: {
   label: React.ReactNode;
   isHovered: boolean;
+  className?: string;
 }) => {
   const duration = 0.2;
 
   return (
     <motion.span
       animate={isHovered ? 'hovered' : 'initial'}
-      className="relative block overflow-hidden whitespace-nowrap font-bold font-roboto text-xs"
+      className={clsx(
+        'relative block overflow-hidden whitespace-nowrap font-bold font-merrieweather text-xs',
+        className
+      )}
       style={{ lineHeight: 1 }}
     >
       <div>

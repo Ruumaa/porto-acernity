@@ -68,7 +68,34 @@
     @apply bg-background text-foreground;
   }
 
-  /* body {
+  /* 
+  body {
     @apply bg-background text-foreground transition-colors duration-300 ease-in;
   } */
+}
+
+.burger {
+
+  width: 100%;
+
+  &::after, &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: auto;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+
+
+  &::after {
+    top: -5px;
+  }
+
+  &::before {
+    top: 5px;
+  }
+
 }

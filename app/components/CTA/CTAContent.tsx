@@ -1,7 +1,5 @@
 import { CardSpotlight } from '@/components/ui/card-spotlight';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 import MovingText from './MovingText';
 import { MotionValue } from 'framer-motion';
 import FadeContainer from '@/components/animations/FadeContainer';
@@ -19,7 +17,7 @@ const CTAContent = ({
   };
 
   return (
-    <div className="relative h-screen">
+    <section className="relative h-screen" id="contact">
       <FadeContainer
         className="w-full max-w-xs mx-auto md:max-w-2xl lg:max-w-4xl xl:max-w-6xl h-full absolute inset-0 z-20 font-poppins flex items-center justify-center overflow-hidden"
         initialY={200}
@@ -50,7 +48,7 @@ const CTAContent = ({
         </CardSpotlight>
       </FadeContainer>
       <MovingText scrollYProgress={scrollYProgress} color={color} />
-    </div>
+    </section>
   );
 };
 

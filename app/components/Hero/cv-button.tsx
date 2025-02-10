@@ -9,7 +9,7 @@ const CVButton = () => {
   const { theme } = useTheme();
   const [isHover, setIsHover] = React.useState(false);
   const handleClick = () => {
-    navigate.push('/pdf/CV.pdf');
+    window.open('/pdf/CV.pdf');
   };
   return (
     <>

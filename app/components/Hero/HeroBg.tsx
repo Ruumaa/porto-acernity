@@ -24,14 +24,14 @@ const HeroBg = ({
         rotate,
         filter: blur,
       }}
-      className="sticky top-0 h-screen pb-[10vh]"
+      className="sticky top-0 h-screen pb-[10vh] w-full"
     >
-      <div className="h-screen relative bg-yellow-200">
+      <section id="start" className="h-screen relative">
         <AuroraBackground>{children}</AuroraBackground>
         <div className="absolute bottom-2 md:bottom-5 right-5 md:right-20">
           <ScrollMore />
         </div>
-      </div>
+      </section>
     </motion.div>
   );
 };

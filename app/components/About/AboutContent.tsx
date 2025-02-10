@@ -13,7 +13,7 @@ const AboutContent = () => {
 
   return (
     <ResponsiveLayout overflow>
-      <div
+      <section
         className="relative z-20 w-full h-full py-[10vh]  xl:py-[20vh] text-start font-poppins"
         id="about"
       >
@@ -61,7 +61,7 @@ const AboutContent = () => {
             ))}
           </TracingBeam>
         </div>
-      </div>
+      </section>
     </ResponsiveLayout>
   );
 };

@@ -13,7 +13,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="h-fit relative" id="projects">
+    <section className="h-fit relative" id="projects">
       <div
         ref={ref}
         className="h-full w-full dark:bg-black bg-white dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center py-20 lg:py-[10vh]"
@@ -27,7 +27,7 @@ const Projects = () => {
         )}
         <ProjectsContent />
       </div>
-    </div>
+    </section>
   );
 };
 
