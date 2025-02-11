@@ -11,7 +11,7 @@ const VisitButton = () => {
   return (
     <>
       {/* container */}
-      <div
+      <button
         className="flex items-center text-black px-6 py-2 rounded-lg relative overflow-clip cursor-pointer dark:hover:bg-black hover:bg-white bg-black dark:bg-white  transition-all duration-300 ease-in hover:shadow-sky-500/[0.1] hover:shadow-md"
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
@@ -54,7 +54,7 @@ const VisitButton = () => {
         >
           <ArrowRight size={15} />
         </motion.div>
-      </div>
+      </button>
     </>
   );
 };

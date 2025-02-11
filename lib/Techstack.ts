@@ -113,7 +113,7 @@ export const growhthTech = [
   },
   { id: 2, name: 'Tailwind', image: '/tailwind.svg' },
   { id: 3, name: 'Typescript', image: '/ts.svg' },
-  { id: 4, name: 'DaisyuUI', image: '/daisyui.svg' },
+  { id: 4, name: 'DaisyUI', image: '/daisyui.svg' },
   { id: 5, name: 'Midtrans', image: '/midtrans.svg' },
   { id: 6, name: 'Nodemailer', image: '/nodemailer.png' },
 ];
